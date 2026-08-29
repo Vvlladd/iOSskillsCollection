@@ -190,6 +190,40 @@ also work in Gemini CLI, pi, Autohand, and anything else that reads it.
 
 ---
 
+## Pairing with engineering-process skills
+
+These skills cover *how iOS works*. They pair well with skills covering *how to
+work* — [`mattpocock/skills`](https://github.com/mattpocock/skills) (MIT) being the
+best of those. Install it selectively, not wholesale: of its 37 skills, roughly 15
+are true drop-ins on a Swift repo.
+
+**Drop in unchanged** — these reason about git diffs, architecture, and discipline,
+with nothing language-specific in them:
+
+```bash
+npx skills add https://github.com/mattpocock/skills --skill diagnosing-bugs --skill handoff --skill domain-modeling --skill research
+```
+
+Also clean: `implement`, `improve-codebase-architecture`, `resolving-merge-conflicts`,
+`teach`, `grilling`, `wizard`, `wait-what`.
+
+**Adapt before trusting** — `tdd` is the notable one. Its `SKILL.md` is
+language-neutral and its argument (integration-style tests over mock-heavy ones)
+translates directly to Swift, but `tests.md` and `mocking.md` teach through
+`jest.mock` and `expect().toBe()`. Swap those for `@Test` / `#expect` or your agent
+learns the wrong idiom. Same caveat, more mildly, for `codebase-design` and `prototype`.
+
+**Expect a prerequisite** — `code-review`, `triage`, `to-spec`, `to-tickets`,
+`wayfinder`, and `ask-matt` read `docs/agents/issue-tracker.md`, which only exists
+after running his `setup-matt-pocock-skills`. They aren't broken without it, they
+just stop and ask. Note that setup writes *his* conventions into your repo.
+
+**Skip on iOS** — `setup-pre-commit` (Husky, lint-staged, Prettier — you want
+SwiftLint/SwiftFormat) and `migrate-to-shoehorn` (a TypeScript-only library). His
+`in-progress/` directory is flagged unstable by him; treat it that way.
+
+---
+
 ## Credits
 
 This collection stands on other people's work, and the registry exists so that
@@ -202,8 +236,8 @@ credit stays with them rather than being laundered through a copy:
   tooling and Xcode Cloud work; his SwiftUI skill is a fork of Antoine's.
 - **[Matt Pocock](https://www.aihero.dev)** ([@mattpocock](https://github.com/mattpocock)) — not iOS,
   but [`mattpocock/skills`](https://github.com/mattpocock/skills) is the model for how a
-  skills repo should be built, and worth installing alongside this one for the
-  engineering-process half (`tdd`, `code-review`, `diagnosing-bugs`, `handoff`).
+  skills repo should be built. Install it *selectively* alongside this one — see
+  [the pairing note](#pairing-with-engineering-process-skills).
 - Every author listed in [`registry/skills.json`](registry/skills.json).
 
 ## Contributing
