@@ -351,10 +351,14 @@ but check before redistributing. `--list` shows the full set with these flags in
 ## Repo layout
 
 ```
-skills/                  16 skills (9 original, 7 adapted)
+skills/                  16 skills — 3 original, 13 derivative
+  <skill>/SKILL.md         the skill itself
+  <skill>/references/      detail loaded on demand
+  <skill>/NOTICE.md        upstream copyright, on all 13 derivatives
 agents/                  ios-swift-engineer subagent
-registry/skills.json     curated index of external sources
-install.sh               installer for Claude Code / Codex / Cursor / OpenCode
+registry/skills.json     24 external sources, linked not vendored
+install.sh               Claude Code / Codex / Cursor / OpenCode
+scripts/validate.sh      frontmatter, registry and licence checks (runs in CI)
 .claude-plugin/          Claude Code marketplace + plugin manifest
 .codex-plugin/           Codex plugin manifest
 ```
