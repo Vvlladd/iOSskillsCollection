@@ -5,6 +5,8 @@ description: Use XcodeBuildMCP to build, run, launch, and debug the current iOS 
 
 # iOS Debugger Agent
 
+_Attribution: derived from [@Dimillian](https://github.com/Dimillian)'s `Dimillian/Skills` (MIT, published 2025-12-30). Locally modified._
+
 ## Overview
 Use XcodeBuildMCP to build and run the current project scheme on a booted iOS simulator, interact with the UI, and capture logs. Prefer the MCP tools for simulator control, logs, and view inspection.
 

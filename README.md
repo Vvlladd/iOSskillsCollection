@@ -24,12 +24,13 @@ or a mega-dump of 200+ vendored copies that go stale the day they're committed.
 
 This one is deliberately different:
 
-- **Bundled = written or genuinely adapted here.** Nine skills are original.
-  Seven are acknowledged MIT derivatives of [`mattpocock/skills`](https://github.com/mattpocock/skills),
-  rewritten for Swift and Xcode rather than copied — each ships a `NOTICE.md`
-  stating what was kept and what is new. Nothing here is a straight re-upload.
+- **Every skill says where it came from.** Three are original. Seven are Swift
+  rewrites of [`mattpocock/skills`](https://github.com/mattpocock/skills). Six came
+  from [`Dimillian/Skills`](https://github.com/Dimillian/Skills) via local project
+  copies and are locally modified. All thirteen derivatives carry a `NOTICE.md`
+  with the upstream copyright, and it installs alongside the skill.
 - **Everything else is linked, not vendored.** The [registry](registry/skills.json)
-  indexes 21 external sources. `--add` clones from the *author's* repo at install
+  indexes 25 external sources. `--add` clones from the *author's* repo at install
   time, so you always get their current version and they keep the credit.
 - **One installer, four tools.** Claude Code, Codex, Cursor, and OpenCode.
 
@@ -43,13 +44,23 @@ This one is deliberately different:
 |---|---|
 | [`apple-foundation-models`](skills/apple-foundation-models) | On-device AI with Apple's Foundation Models: `SystemLanguageModel`, guided generation, tool calling, safety, localization. **10 reference docs, ~130 KB.** |
 | [`instruments-profile-session`](skills/instruments-profile-session) | Instruments' record button as a workflow: play → interact → stop → one report fusing trace analysis with console logs. Bridges XcodeBuildMCP and XcodeInstrumentsMCP. |
+| [`gh-issue-fix-flow`](skills/gh-issue-fix-flow) | Issue number → `gh` intake → fix → build/test → closing commit → push. |
+
+### From `Dimillian/Skills` (MIT)
+
+Six skills that reached this repo through local project copies. Thomas Ricouard
+published them on 2025-12-30; the copies here date from 2026-01-11 and have
+drifted since. **They are not a mirror** — for the maintained versions go to
+[`Dimillian/Skills`](https://github.com/Dimillian/Skills), or `./install.sh --add dimillian-skills`.
+
+| Skill | What it does |
+|---|---|
 | [`swiftui-liquid-glass`](skills/swiftui-liquid-glass) | Build and review iOS 26+ Liquid Glass UI — `glassEffect`, `GlassEffectContainer`, glass button styles, with availability fallbacks. |
 | [`swiftui-performance-audit`](skills/swiftui-performance-audit) | Diagnose janky scrolling, excessive view updates, and layout thrash from code review, escalating to Instruments when review isn't enough. |
-| [`swiftui-view-refactor`](skills/swiftui-view-refactor) | Consistent view ordering, dependency injection, and correct `@Observable` usage. Includes MV pattern reference. |
+| [`swiftui-view-refactor`](skills/swiftui-view-refactor) | Consistent view ordering, dependency injection, and correct `@Observable` usage. Includes an MV pattern reference drawn from Ricouard's "SwiftUI in 2025: Forget MVVM". |
 | [`swift-concurrency-expert`](skills/swift-concurrency-expert) | Swift 6.2 Approachable Concurrency: smallest-safe-fix triage for isolation and `Sendable` errors. |
 | [`ios-debugger-agent`](skills/ios-debugger-agent) | Drive a booted simulator via XcodeBuildMCP — build, launch, tap through the UI, capture logs, diagnose runtime behavior. |
 | [`app-store-changelog`](skills/app-store-changelog) | Turn git history since the last tag into user-facing App Store "What's New" copy. |
-| [`gh-issue-fix-flow`](skills/gh-issue-fix-flow) | Issue number → `gh` intake → fix → build/test → closing commit → push. |
 
 ### Adapted from `mattpocock/skills` (MIT)
 
@@ -138,7 +149,7 @@ Run `./install.sh --dry-run` first if you want to see exactly what lands where.
 
 ## The registry
 
-21 external iOS/Swift skill sources, each hand-checked for quality and license.
+25 external iOS/Swift skill sources, each hand-checked for quality and license.
 
 ```bash
 ./install.sh --list
@@ -182,6 +193,9 @@ A sample of what's indexed:
 | [SwiftUI-Agent-Skill](https://github.com/AvdLee/SwiftUI-Agent-Skill) ★3.5k | Antoine van der Lee | MIT | 26 reference files: state, animation, charts, macOS, `.trace` analysis |
 | [Swift-Concurrency-Agent-Skill](https://github.com/AvdLee/Swift-Concurrency-Agent-Skill) ★1.6k | Antoine van der Lee | MIT | actors, `Sendable`, Swift 6 migration, linting |
 | [Xcode-Build-Optimization](https://github.com/AvdLee/Xcode-Build-Optimization-Agent-Skill) ★1.2k | Antoine van der Lee | MIT | 6 skills: benchmark, analyze, fix build times |
+| [agent-scripts](https://github.com/steipete/agent-scripts) ★6.6k | Peter Steinberger | MIT | 54 skills: Instruments, Hopper, Xcode sync, Mac release |
+| [Skills](https://github.com/Dimillian/Skills) ★3.9k | Thomas Ricouard | MIT | the origin of the widely-copied SwiftUI skills, plus swarm patterns |
+| [agent-rules](https://github.com/steipete/agent-rules) ★5.7k | Peter Steinberger | MIT | `modern-swift`, compact Swift 6 migration, Cursor `.mdc` rules |
 | [swift-ios-skills](https://github.com/dpearson2699/swift-ios-skills) ★1k | dpearson2699 | ⚠️ custom | 84 framework skills, AlarmKit → TabletopKit |
 | [claude-code-apple-skills](https://github.com/rshankras/claude-code-apple-skills) ★684 | Ravi Shankar | MIT | code plus ASO, monetization, legal, release review |
 | [apple-skills](https://github.com/Prisma-Labs-Dev/apple-skills) ★323 | Prisma Labs | MIT | 32 framework-scoped skills + Apple docs index |
@@ -252,6 +266,16 @@ credit stays with them rather than being laundered through a copy:
   skills, and the repo conventions this one follows.
 - **[Pol Piella](https://polpiella.dev)** ([@polpielladev](https://github.com/polpielladev)) — iOS
   tooling and Xcode Cloud work; his SwiftUI skill is a fork of Antoine's.
+- **[Thomas Ricouard](https://dimillian.app)** ([@Dimillian](https://github.com/Dimillian)) —
+  author of [Ice Cubes](https://github.com/Dimillian/IceCubesApp) and of
+  [`Dimillian/Skills`](https://github.com/Dimillian/Skills), the origin of the SwiftUI
+  agent skills now circulating widely in the iOS community. Six of the skills bundled
+  here are his work, modified.
+- **[Peter Steinberger](https://steipete.me)** ([@steipete](https://github.com/steipete)) —
+  [`agent-scripts`](https://github.com/steipete/agent-scripts) and
+  [`agent-rules`](https://github.com/steipete/agent-rules): the deepest macOS and
+  release-engineering coverage anywhere, and the attribution practice this repo
+  follows for shared skills.
 - **[Matt Pocock](https://www.aihero.dev)** ([@mattpocock](https://github.com/mattpocock)) — not iOS,
   but [`mattpocock/skills`](https://github.com/mattpocock/skills) is the model for how a
   skills repo should be built. Install it *selectively* alongside this one — see

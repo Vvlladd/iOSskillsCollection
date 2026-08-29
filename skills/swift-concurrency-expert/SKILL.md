@@ -5,6 +5,8 @@ description: Swift Concurrency review and remediation for Swift 6.2+. Use when a
 
 # Swift Concurrency Expert
 
+_Attribution: derived from [@Dimillian](https://github.com/Dimillian)'s `Dimillian/Skills` (MIT, published 2025-12-30). Locally modified._
+
 ## Overview
 
 Review and fix Swift Concurrency issues in Swift 6.2+ codebases by applying actor isolation, Sendable safety, and modern concurrency patterns with minimal behavior changes.

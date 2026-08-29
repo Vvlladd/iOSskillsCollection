@@ -435,6 +435,117 @@
         "general"
       ],
       "why": "General-purpose Swift iOS/macOS development skill."
+    },
+    {
+      "id": "dimillian-skills",
+      "name": "Dimillian Skills",
+      "repo": "Dimillian/Skills",
+      "author": "Thomas Ricouard",
+      "author_url": "https://dimillian.app",
+      "license": "MIT",
+      "stars": 3931,
+      "skills": [
+        "swiftui-view-refactor",
+        "swiftui-liquid-glass",
+        "swiftui-performance-audit",
+        "swift-concurrency-expert",
+        "swiftui-ui-patterns",
+        "app-store-changelog",
+        "ios-debugger-agent",
+        "github",
+        "bug-hunt-swarm",
+        "review-swarm",
+        "orchestrate-batch-refactor",
+        "project-skill-audit",
+        "macos-spm-app-packaging",
+        "macos-menubar-tuist-app",
+        "review-and-simplify-changes"
+      ],
+      "topics": [
+        "swiftui",
+        "liquid-glass",
+        "concurrency",
+        "swarm",
+        "tuist",
+        "spm"
+      ],
+      "why": "The origin of the SwiftUI skills circulating across the iOS agent community, from the author of Ice Cubes. Six of this repo's bundled skills derive from it. Also has swarm patterns (bug-hunt-swarm, review-swarm) nothing else here covers."
+    },
+    {
+      "id": "steipete-agent-scripts",
+      "name": "Agent Scripts",
+      "repo": "steipete/agent-scripts",
+      "author": "Peter Steinberger",
+      "author_url": "https://steipete.me",
+      "license": "MIT",
+      "stars": 6578,
+      "skills": [
+        "instruments-profiling",
+        "native-app-performance",
+        "xcode-sync",
+        "hopper-debugger",
+        "release-mac-app",
+        "codex-debugging",
+        "frontend-design",
+        "github-deep-review",
+        "project-structure",
+        "oracle",
+        "peekaboo",
+        "browser-use"
+      ],
+      "topics": [
+        "instruments",
+        "macos",
+        "release",
+        "debugging",
+        "agent-tooling"
+      ],
+      "why": "54 skills from the PSPDFKit founder, heavier on macOS and release engineering than anywhere else: Hopper disassembly, Instruments profiling, Xcode sync, Mac app release. Credits Ricouard where skills are shared."
+    },
+    {
+      "id": "steipete-agent-rules",
+      "name": "Agent Rules",
+      "repo": "steipete/agent-rules",
+      "author": "Peter Steinberger",
+      "author_url": "https://steipete.me",
+      "license": "MIT",
+      "stars": 5697,
+      "skills": [
+        "modern-swift",
+        "swift6-migration-compact",
+        "pr-review",
+        "bug-fix",
+        "implement-task",
+        "safari-automation",
+        "screenshot-automation",
+        "code-analysis"
+      ],
+      "topics": [
+        "swift6",
+        "migration",
+        "cursor",
+        "rules"
+      ],
+      "why": "Rules rather than skills - Cursor .mdc format, works as agent context anywhere. modern-swift and the compact Swift 6 migration guide are the standouts."
+    },
+    {
+      "id": "dimillian-claude",
+      "name": "Dimillian's Claude Code Setup",
+      "repo": "Dimillian/Claude",
+      "author": "Thomas Ricouard",
+      "author_url": "https://dimillian.app",
+      "license": "NONE",
+      "license_note": "No license file - all rights reserved. Read it, don't redistribute it.",
+      "stars": 355,
+      "skills": [
+        "agents"
+      ],
+      "topics": [
+        "setup",
+        "subagents",
+        "workflow"
+      ],
+      "why": "His actual Claude Code configuration and subagents - useful as a worked example of how a shipping iOS dev structures agent work."
     }
   ],
   "see_also": [
@@ -461,6 +572,12 @@
       "repo": "AvdLee/Swift-Agent-Skills-Cursor",
       "license": "NONE",
       "why": "Antoine's skills packaged for the Cursor plugin marketplace."
+    },
+    {
+      "name": "CodexSkillManager",
+      "repo": "Dimillian/CodexSkillManager",
+      "license": "MIT",
+      "why": "macOS app for managing installed Codex skills - a GUI for the thing this repo's install.sh does from the terminal."
     }
   ]
 }

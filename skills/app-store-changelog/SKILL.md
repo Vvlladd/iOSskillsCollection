@@ -5,6 +5,8 @@ description: Create user-facing App Store release notes by collecting and summar
 
 # App Store Changelog
 
+_Attribution: derived from [@Dimillian](https://github.com/Dimillian)'s `Dimillian/Skills` (MIT, published 2025-12-30). Locally modified._
+
 ## Overview
 Generate a comprehensive, user-facing changelog from git history since the last tag, then translate commits into clear App Store release notes.
 

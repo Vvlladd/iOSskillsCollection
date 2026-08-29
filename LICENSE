@@ -31,9 +31,7 @@ authors' own licenses.
 
 THIRD-PARTY DERIVATIVE WORK
 
-The following skills are derivatives of skills from
-https://github.com/mattpocock/skills, MIT (c) 2026 Matt Pocock, used and
-modified under those terms:
+Derived from https://github.com/mattpocock/skills, MIT (c) 2026 Matt Pocock:
 
     skills/swift-tdd/               <- engineering/tdd
     skills/swift-diagnosing-bugs/   <- engineering/diagnosing-bugs
@@ -43,9 +41,27 @@ modified under those terms:
     skills/apple-docs-research/     <- engineering/research
     skills/swift-pre-commit/        <- misc/setup-pre-commit
 
-Each contains a NOTICE.md reproducing the upstream copyright and permission
-notice as that license requires, and stating what was kept versus added. The
-NOTICE ships inside each skill directory so it travels with any copy the
-installer makes.
+Derived from https://github.com/Dimillian/Skills, MIT (c) 2025 Thomas Ricouard:
 
-The remaining nine skills in skills/ are original work.
+    skills/app-store-changelog/
+    skills/ios-debugger-agent/
+    skills/swift-concurrency-expert/
+    skills/swiftui-liquid-glass/
+    skills/swiftui-performance-audit/
+    skills/swiftui-view-refactor/
+
+Each contains a NOTICE.md reproducing the upstream copyright and permission
+notice as those licenses require. The NOTICE ships inside each skill directory
+so it travels with any copy the installer makes.
+
+The Ricouard-derived skills were inherited into this repo from local project
+copies whose provenance was not recorded at the time. They diverged from
+upstream before this repo existed and are NOT a current mirror; see
+Dimillian/Skills for the maintained versions.
+
+Original work in this repo:
+
+    skills/apple-foundation-models/
+    skills/instruments-profile-session/
+    skills/gh-issue-fix-flow/        (provenance unverified; no upstream found)
+    agents/, registry/, install.sh, scripts/

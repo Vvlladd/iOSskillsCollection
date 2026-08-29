@@ -5,6 +5,8 @@ description: Refactor and review SwiftUI view files for consistent structure, de
 
 # SwiftUI View Refactor
 
+_Attribution: derived from [@Dimillian](https://github.com/Dimillian)'s `Dimillian/Skills` (MIT, published 2025-12-30). Locally modified._
+
 ## Overview
 Apply a consistent structure and dependency pattern to SwiftUI views, with a focus on ordering, Model-View (MV) patterns, careful view model handling, and correct Observation usage.
 
