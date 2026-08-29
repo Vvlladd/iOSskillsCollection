@@ -30,7 +30,7 @@ This one is deliberately different:
   copies and are locally modified. All thirteen derivatives carry a `NOTICE.md`
   with the upstream copyright, and it installs alongside the skill.
 - **Everything else is linked, not vendored.** The [registry](registry/skills.json)
-  indexes 25 external sources. `--add` clones from the *author's* repo at install
+  indexes 24 external sources. `--add` clones from the *author's* repo at install
   time, so you always get their current version and they keep the credit.
 - **One installer, four tools.** Claude Code, Codex, Cursor, and OpenCode.
 
@@ -244,7 +244,7 @@ workflow and review. Install both and prefer Apple's on questions of fact.
 
 ## The registry
 
-25 external iOS/Swift skill sources, each hand-checked for quality and license.
+24 external iOS/Swift skill sources, each hand-checked for quality and license.
 
 ```bash
 ./install.sh --list
@@ -294,7 +294,10 @@ A sample of what's indexed:
 | [swift-ios-skills](https://github.com/dpearson2699/swift-ios-skills) ★1k | dpearson2699 | ⚠️ custom | 84 framework skills, AlarmKit → TabletopKit |
 | [claude-code-apple-skills](https://github.com/rshankras/claude-code-apple-skills) ★684 | Ravi Shankar | MIT | code plus ASO, monetization, legal, release review |
 | [apple-skills](https://github.com/Prisma-Labs-Dev/apple-skills) ★323 | Prisma Labs | MIT | 32 framework-scoped skills + Apple docs index |
-| [xcode27-skills](https://github.com/superagents-lab/xcode27-skills) ★299 | superagents-lab | ⚠️ none | Apple's own Xcode 27 skills |
+
+> **Apple's Xcode 27 skills are deliberately not indexed here.** GitHub mirrors of
+> them exist, but they redistribute Apple's content with no license. Export them
+> from your own Xcode instead — see [above](#apples-own-skills-dont-install-them-from-here).
 
 ⚠️ marks sources with a non-standard or missing license — fine to install and use,
 but check before redistributing. `--list` shows the full set with these flags inline.
