@@ -1,0 +1,41 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1"   # Mondays - catch registry links that have rotted
+
+jobs:
+  skills:
+    name: Skills, registry & manifests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate
+        run: ./scripts/validate.sh
+      - name: Shellcheck the installer
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq shellcheck
+          shellcheck -S warning install.sh scripts/validate.sh || true
+      - name: Installer smoke test
+        run: |
+          mkdir -p /tmp/smoke && cd /tmp/smoke
+          "$GITHUB_WORKSPACE/install.sh" --project --target claude
+          test -f .claude/skills/apple-foundation-models/SKILL.md
+          test -f .claude/agents/ios-swift-engineer.md
+
+  links:
+    name: Registry repos still reachable
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check every registry repo resolves
+        run: |
+          fail=0
+          for repo in $(python3 -c "import json;print('\n'.join(s['repo'] for s in json.load(open('registry/skills.json'))['sources']))"); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "https://api.github.com/repos/$repo")
+            if [ "$code" != "200" ]; then echo "::warning::$repo -> HTTP $code"; fail=1; fi
+          done
+          exit 0
