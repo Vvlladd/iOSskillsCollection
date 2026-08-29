@@ -147,6 +147,33 @@ Run `./install.sh --dry-run` first if you want to see exactly what lands where.
 
 ---
 
+## Apple's own skills (don't install them from here)
+
+Xcode 27 ships seven agent skills, and one command exports them from **your**
+install:
+
+```bash
+xcrun mcpbridge run-agent skills export --output-dir ~/.claude/skills
+```
+
+Xcode must be running — the tool connects to it. Verified on Xcode 27.0 Beta 5;
+it exports `swiftui-specialist`, `swiftui-whats-new-27`, `uikit-app-modernization`,
+`test-modernizer`, `device-interaction`, `c-bounds-safety`, and
+`audit-xcode-security-settings`.
+
+**These are deliberately not vendored here, and you should be wary of any repo
+that does vendor them.** They are Apple's content, shipped under the Xcode
+license, with no grant permitting redistribution — which is why the mirrors of
+them on GitHub carry no license at all. Everyone with Xcode already has them one
+command away, they change with every Xcode build, and a vendored copy silently
+misrepresents which build it came from.
+
+They overlap this collection in places — Apple's `swiftui-specialist` against the
+SwiftUI skills here, `test-modernizer` against [`swift-tdd`](skills/swift-tdd),
+`device-interaction` against [`ios-debugger-agent`](skills/ios-debugger-agent).
+Apple's are authoritative on new API and deprecations; these go deeper on
+workflow and review. Install both and prefer Apple's on questions of fact.
+
 ## The registry
 
 25 external iOS/Swift skill sources, each hand-checked for quality and license.

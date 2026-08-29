@@ -243,7 +243,7 @@
       "repo": "superagents-lab/xcode27-skills",
       "author": "superagents-lab (export of Apple's Xcode 27 skills)",
       "license": "NONE",
-      "license_note": "No license file. Content originates from Apple's Xcode 27 - treat as Apple-owned and consult Apple's terms.",
+      "license_note": "No license file, and the content is Apple's - shipped inside Xcode under the Xcode license with no redistribution grant. Prefer exporting from your own install: xcrun mcpbridge run-agent skills export",
       "stars": 299,
       "skills": [
         "swiftui",
@@ -257,7 +257,7 @@
         "xcode27",
         "modernization"
       ],
-      "why": "Apple's own agent skills, lifted out of Xcode 27. Closest thing to a first-party answer on modernization and bounds safety."
+      "why": "A GitHub mirror of Apple's Xcode 27 skills. Listed for discoverability, but export them from your own Xcode instead - same content, correct version, no licensing question."
     },
     {
       "id": "wholiver-swiftui-design",
