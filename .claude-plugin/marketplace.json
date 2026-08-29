@@ -1,0 +1,35 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ios-skills-collection",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Vlad Toma",
+    "url": "https://github.com/Vvlladd"
+  },
+  "metadata": {
+    "description": "A lean, curated collection of iOS and Swift Agent Skills: nine original skills for Apple Foundation Models, Instruments profiling, Liquid Glass, SwiftUI performance, and App Store release flow - plus a vetted registry of the best skills from across the community."
+  },
+  "plugins": [
+    {
+      "name": "ios-skills-collection",
+      "description": "Nine original iOS/Swift Agent Skills covering Apple Foundation Models, Instruments profiling sessions, SwiftUI Liquid Glass, SwiftUI performance audits, view refactoring, Swift 6.2 concurrency, simulator debugging, App Store changelogs, and GitHub issue fix flow. Includes the ios-swift-engineer subagent.",
+      "repository": "https://github.com/Vvlladd/iOSskillsCollection",
+      "version": "1.0.0",
+      "author": {
+        "name": "Vlad Toma",
+        "url": "https://github.com/Vvlladd"
+      },
+      "license": "MIT",
+      "category": "development",
+      "keywords": [
+        "ios", "swift", "swiftui", "xcode", "apple",
+        "foundation-models", "apple-intelligence", "on-device-ai",
+        "liquid-glass", "ios26", "instruments", "profiling",
+        "performance", "concurrency", "swift6", "simulator",
+        "app-store", "release-notes", "agent-skills"
+      ],
+      "tags": ["ios", "swift", "swiftui", "apple-platforms", "performance", "ai"],
+      "source": "./"
+    }
+  ]
+}

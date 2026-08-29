@@ -1,0 +1,466 @@
+{
+  "$schema": "./schema.json",
+  "version": "1.0.0",
+  "updated": "2026-08-29",
+  "note": "Curated index of externally-maintained iOS/Swift Agent Skills. Entries are LINKED, never vendored - install pulls from the upstream repo so you always get the author's current version. 'license' is the SPDX id GitHub reports; 'NONE' means the repo ships no license file and is therefore all-rights-reserved (usable, but not redistributable).",
+  "sources": [
+    {
+      "id": "avdlee-swift-concurrency",
+      "name": "Swift Concurrency",
+      "repo": "AvdLee/Swift-Concurrency-Agent-Skill",
+      "author": "Antoine van der Lee",
+      "author_url": "https://www.avanderlee.com",
+      "license": "MIT",
+      "stars": 1633,
+      "skills": [
+        "swift-concurrency"
+      ],
+      "topics": [
+        "concurrency",
+        "async-await",
+        "actors",
+        "sendable",
+        "swift6"
+      ],
+      "why": "The reference Swift Concurrency skill. Triage playbook plus 16 deep reference files covering actors, Sendable, migration, and linting."
+    },
+    {
+      "id": "avdlee-swiftui",
+      "name": "SwiftUI Best Practices",
+      "repo": "AvdLee/SwiftUI-Agent-Skill",
+      "author": "Antoine van der Lee",
+      "author_url": "https://www.avanderlee.com",
+      "license": "MIT",
+      "stars": 3466,
+      "skills": [
+        "swiftui-expert-skill"
+      ],
+      "topics": [
+        "swiftui",
+        "state-management",
+        "performance",
+        "liquid-glass",
+        "instruments"
+      ],
+      "why": "The most-starred iOS agent skill. 26 reference files spanning state management, animations, charts, macOS scenes, localization, and .trace analysis."
+    },
+    {
+      "id": "avdlee-core-data",
+      "name": "Core Data",
+      "repo": "AvdLee/Core-Data-Agent-Skill",
+      "author": "Antoine van der Lee",
+      "author_url": "https://www.avanderlee.com",
+      "license": "MIT",
+      "stars": 302,
+      "skills": [
+        "core-data"
+      ],
+      "topics": [
+        "core-data",
+        "persistence",
+        "fetch-requests"
+      ],
+      "why": "Data modeling, fetch request tuning, and the persistence patterns that actually bite in production."
+    },
+    {
+      "id": "avdlee-swift-testing",
+      "name": "Swift Testing",
+      "repo": "AvdLee/Swift-Testing-Agent-Skill",
+      "author": "Antoine van der Lee",
+      "author_url": "https://www.avanderlee.com",
+      "license": "MIT",
+      "stars": 442,
+      "skills": [
+        "swift-testing"
+      ],
+      "topics": [
+        "swift-testing",
+        "xctest",
+        "migration",
+        "test-architecture"
+      ],
+      "why": "Write modern Swift Testing suites and migrate off XCTest without losing coverage."
+    },
+    {
+      "id": "avdlee-xcode-build-optimization",
+      "name": "Xcode Build Optimization",
+      "repo": "AvdLee/Xcode-Build-Optimization-Agent-Skill",
+      "author": "Antoine van der Lee",
+      "author_url": "https://www.avanderlee.com",
+      "license": "MIT",
+      "stars": 1211,
+      "skills": [
+        "xcode-build-orchestrator",
+        "xcode-build-benchmark",
+        "xcode-build-fixer",
+        "xcode-compilation-analyzer",
+        "xcode-project-analyzer",
+        "spm-build-analysis"
+      ],
+      "topics": [
+        "build-times",
+        "benchmarking",
+        "spm",
+        "compilation"
+      ],
+      "why": "Six coordinated skills that benchmark your build, find the slow files, and fix the settings causing it."
+    },
+    {
+      "id": "avdlee-xcode-disk-cleanup",
+      "name": "Xcode Disk Cleanup",
+      "repo": "AvdLee/Xcode-Disk-Cleanup-Agent-Skill",
+      "author": "Antoine van der Lee",
+      "author_url": "https://www.avanderlee.com",
+      "license": "MIT",
+      "stars": 51,
+      "skills": [
+        "xcode-disk-cleanup"
+      ],
+      "topics": [
+        "derived-data",
+        "simulators",
+        "disk-space"
+      ],
+      "why": "Audits Xcode's storage and reclaims GiB - deleting only what you explicitly approve."
+    },
+    {
+      "id": "avdlee-rocketsim",
+      "name": "RocketSim Simulator Automation",
+      "repo": "AvdLee/RocketSim-Agent-Skill",
+      "author": "Antoine van der Lee",
+      "author_url": "https://www.avanderlee.com",
+      "license": "NOASSERTION",
+      "license_note": "Custom license - review before redistributing. Requires the RocketSim app.",
+      "stars": 17,
+      "skills": [
+        "rocketsim"
+      ],
+      "topics": [
+        "simulator",
+        "ui-automation",
+        "rocketsim"
+      ],
+      "why": "Drive the iOS Simulator through the RocketSim CLI: inspect visible UI, tap, swipe, type."
+    },
+    {
+      "id": "rshankras-apple-skills",
+      "name": "Claude Code Apple Skills",
+      "repo": "rshankras/claude-code-apple-skills",
+      "author": "Ravi Shankar",
+      "license": "MIT",
+      "stars": 684,
+      "skills": [
+        "swift",
+        "swiftui",
+        "swiftdata",
+        "testing",
+        "performance",
+        "app-store",
+        "apple-intelligence",
+        "core-ml",
+        "mapkit",
+        "macos",
+        "visionos",
+        "watchos",
+        "monetization",
+        "growth",
+        "design",
+        "legal",
+        "security",
+        "product",
+        "release-review"
+      ],
+      "topics": [
+        "breadth",
+        "app-store",
+        "product",
+        "monetization"
+      ],
+      "why": "The widest single collection: 20+ skill families reaching past code into ASO, monetization, legal, and release review."
+    },
+    {
+      "id": "prisma-apple-skills",
+      "name": "Apple Skills",
+      "repo": "Prisma-Labs-Dev/apple-skills",
+      "author": "Prisma Labs",
+      "license": "MIT",
+      "stars": 323,
+      "skills": [
+        "swiftui",
+        "swift-concurrency",
+        "swift-testing",
+        "swiftdata",
+        "storekit",
+        "widgetkit",
+        "healthkit",
+        "mapkit",
+        "appintents",
+        "tipkit",
+        "uikit",
+        "hig",
+        "ios-liquid-glass",
+        "xcuitest",
+        "simulator-utils",
+        "combine",
+        "core-animation",
+        "corehaptics",
+        "eventkit",
+        "photosui",
+        "usernotifications",
+        "apple-aso",
+        "apple-docs-index"
+      ],
+      "topics": [
+        "frameworks",
+        "liquid-glass",
+        "hig",
+        "ios26"
+      ],
+      "why": "32 framework-scoped skills with an Apple docs index - strong when you need one specific framework done right."
+    },
+    {
+      "id": "dpearson-swift-ios-skills",
+      "name": "Swift iOS Skills",
+      "repo": "dpearson2699/swift-ios-skills",
+      "author": "dpearson2699",
+      "license": "NOASSERTION",
+      "license_note": "Non-standard license - check LICENSE before reuse.",
+      "stars": 1047,
+      "skills": [
+        "84 framework skills - see repo"
+      ],
+      "topics": [
+        "breadth",
+        "frameworks",
+        "ios26",
+        "swift6"
+      ],
+      "why": "The most exhaustive framework coverage anywhere: 84 skills from AlarmKit and DockKit to MetricKit and TabletopKit."
+    },
+    {
+      "id": "xcode27-skills",
+      "name": "Xcode 27 Official Skills",
+      "repo": "superagents-lab/xcode27-skills",
+      "author": "superagents-lab (export of Apple's Xcode 27 skills)",
+      "license": "NONE",
+      "license_note": "No license file. Content originates from Apple's Xcode 27 - treat as Apple-owned and consult Apple's terms.",
+      "stars": 299,
+      "skills": [
+        "swiftui",
+        "uikit-modernization",
+        "swift-testing",
+        "c-bounds-safety",
+        "security-hardening"
+      ],
+      "topics": [
+        "apple-official",
+        "xcode27",
+        "modernization"
+      ],
+      "why": "Apple's own agent skills, lifted out of Xcode 27. Closest thing to a first-party answer on modernization and bounds safety."
+    },
+    {
+      "id": "wholiver-swiftui-design",
+      "name": "SwiftUI Design Skill",
+      "repo": "Wholiver/swiftui-design-skill",
+      "author": "Wholiver",
+      "license": "MIT",
+      "stars": 179,
+      "skills": [
+        "swiftui-design"
+      ],
+      "topics": [
+        "design",
+        "visual-quality",
+        "brand"
+      ],
+      "why": "Six hard rules aimed squarely at AI-generated UI slop, plus design direction and a five-dimensional review pass."
+    },
+    {
+      "id": "parthjadhav-marketing-capture",
+      "name": "iOS Marketing Capture",
+      "repo": "ParthJadhav/ios-marketing-capture",
+      "author": "Parth Jadhav",
+      "license": "MIT",
+      "stars": 258,
+      "skills": [
+        "ios-marketing-capture"
+      ],
+      "topics": [
+        "screenshots",
+        "app-store",
+        "localization",
+        "automation"
+      ],
+      "why": "Automates multi-locale App Store screenshot and asset generation - the chore nobody wants to do by hand."
+    },
+    {
+      "id": "dembsky-propmotion",
+      "name": "PropMotion",
+      "repo": "dembsky/PropMotion",
+      "author": "dembsky",
+      "license": "MIT",
+      "stars": 108,
+      "skills": [
+        "propmotion"
+      ],
+      "topics": [
+        "scenekit",
+        "3d",
+        "animation"
+      ],
+      "why": "Drops a single choreographed 3D object into a SwiftUI app - SceneKit stages, baked motion, real shadows."
+    },
+    {
+      "id": "haider-liquid-glass",
+      "name": "Liquid Glass Skill",
+      "repo": "haider-nawaz/liquid-glass-skill",
+      "author": "Haider Nawaz",
+      "license": "NONE",
+      "license_note": "No license file - all rights reserved.",
+      "stars": 49,
+      "skills": [
+        "liquid-glass"
+      ],
+      "topics": [
+        "liquid-glass",
+        "ios26",
+        "migration"
+      ],
+      "why": "Dedicated iOS 26+/macOS 26+ Liquid Glass adoption and migration guidance."
+    },
+    {
+      "id": "alpozcan-ios-agent-skills",
+      "name": "iOS Agent Skills",
+      "repo": "alpozcan/iOSAgentSkills",
+      "author": "alpozcan",
+      "license": "MIT",
+      "stars": 25,
+      "skills": [
+        "architecture",
+        "ui",
+        "testing-and-debugging",
+        "platform-frameworks",
+        "ai-and-intelligence"
+      ],
+      "topics": [
+        "architecture",
+        "tuist",
+        "patterns"
+      ],
+      "why": "Architecture-first rather than API-first, and one of the few that treats Tuist as a real concern."
+    },
+    {
+      "id": "yusufkaran-autotest",
+      "name": "SwiftUI AutoTest",
+      "repo": "yusufkaran/swiftui-autotest-skill",
+      "author": "Yusuf Karan",
+      "license": "MIT",
+      "stars": 24,
+      "skills": [
+        "swiftui-autotest"
+      ],
+      "topics": [
+        "testing",
+        "accessibility",
+        "visual-testing",
+        "memory-leaks"
+      ],
+      "why": "Visual testing via computer use, memory leak analysis, and automatic accessibility identifier insertion."
+    },
+    {
+      "id": "erikote-api-design",
+      "name": "Swift API Design Guidelines",
+      "repo": "Erikote04/Swift-API-Design-Guidelines-Agent-Skill",
+      "author": "Erikote04",
+      "license": "MIT",
+      "stars": 27,
+      "skills": [
+        "swift-api-design-guidelines"
+      ],
+      "topics": [
+        "naming",
+        "api-design",
+        "documentation"
+      ],
+      "why": "Turns Apple's API Design Guidelines into something an agent can actually apply to naming and argument labels."
+    },
+    {
+      "id": "sambit-foundation-models",
+      "name": "Swift Foundation Models Skills",
+      "repo": "sambitcreate/Swift-Foundation-Models-Skills",
+      "author": "Sambit",
+      "license": "MIT",
+      "stars": 21,
+      "skills": [
+        "22 Foundation Models skills - setup, streaming, RAG, tools, SwiftData, voice"
+      ],
+      "topics": [
+        "foundation-models",
+        "apple-intelligence",
+        "on-device-ai",
+        "rag"
+      ],
+      "why": "Granular Apple Intelligence coverage: 22 task-shaped skills from token budgeting to RAG pipelines."
+    },
+    {
+      "id": "alessio-foundation-models",
+      "name": "Apple Foundation Models",
+      "repo": "alessiorubicini/Apple-Foundation-Models-Agent-Skill",
+      "author": "Alessio Rubicini",
+      "license": "MIT",
+      "stars": 10,
+      "skills": [
+        "apple-foundation-models"
+      ],
+      "topics": [
+        "foundation-models",
+        "on-device-ai"
+      ],
+      "why": "Single-skill Foundation Models guidance following AvdLee's repo conventions."
+    },
+    {
+      "id": "hmohamed-swift-development",
+      "name": "Swift Development",
+      "repo": "hmohamed01/swift-development",
+      "author": "hmohamed01",
+      "license": "NONE",
+      "license_note": "No license file - all rights reserved.",
+      "stars": 60,
+      "skills": [
+        "swift-development"
+      ],
+      "topics": [
+        "swift",
+        "general"
+      ],
+      "why": "General-purpose Swift iOS/macOS development skill."
+    }
+  ],
+  "see_also": [
+    {
+      "name": "Skills For Real Engineers",
+      "repo": "mattpocock/skills",
+      "license": "MIT",
+      "why": "Not iOS - general engineering process skills (tdd, code-review, diagnosing-bugs, domain-modeling, research, handoff). Pairs well with this collection: his teach an agent how to work, these teach it how iOS works."
+    },
+    {
+      "name": "awesome-ios-ai",
+      "repo": "Techopolis/awesome-ios-ai",
+      "license": "CC0-1.0",
+      "why": "Broader landscape list: agent skills, agent teams, MCP servers, and iOS tooling."
+    },
+    {
+      "name": "ios-skills-collection",
+      "repo": "Arjunadh5305/ios-skills-collection",
+      "license": "NONE",
+      "why": "Vendored mega-collection - 200+ SKILL.md files from 28 authors, if you want everything in one clone."
+    },
+    {
+      "name": "Swift Agent Skills for Cursor",
+      "repo": "AvdLee/Swift-Agent-Skills-Cursor",
+      "license": "NONE",
+      "why": "Antoine's skills packaged for the Cursor plugin marketplace."
+    }
+  ]
+}
