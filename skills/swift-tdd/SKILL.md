@@ -5,6 +5,10 @@ description: Test-driven development for Swift using Swift Testing or XCTest. Us
 
 # Test-Driven Development in Swift
 
+> **Migrating rather than writing?** Apple's `test-modernizer` (via
+> `xcrun mcpbridge run-agent skills export`) handles XCTest → Swift Testing
+> migration. This skill is the red→green workflow for new tests.
+
 TDD is the red → green loop. This skill is the reference that makes that loop
 produce tests worth keeping: what a good test is, where tests go in a Swift
 module, the anti-patterns, and the rules of the loop. Every section applies on

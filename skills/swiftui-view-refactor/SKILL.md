@@ -7,6 +7,10 @@ description: Refactor and review SwiftUI view files for consistent structure, de
 
 _Attribution: derived from [@Dimillian](https://github.com/Dimillian)'s `Dimillian/Skills` (MIT, published 2025-12-30). Locally modified._
 
+> **Defer to Apple where Apple is authoritative.** If Apple's `swiftui-specialist`
+> is installed, its `references/structure.md` governs when a section becomes its own
+> `View` type. This skill covers ordering, dependency injection, and MV patterns.
+
 ## Overview
 Apply a consistent structure and dependency pattern to SwiftUI views, with a focus on ordering, Model-View (MV) patterns, careful view model handling, and correct Observation usage.
 

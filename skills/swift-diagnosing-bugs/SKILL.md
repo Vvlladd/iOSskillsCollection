@@ -5,6 +5,10 @@ description: Diagnosis loop for hard iOS/macOS bugs, crashes, and performance re
 
 # Diagnosing Bugs in Swift
 
+> **Driving a device or simulator?** Apple's `device-interaction` skill (via
+> `xcrun mcpbridge run-agent skills export`) covers the mechanics — screenshots,
+> UI hierarchy, taps. This skill is the diagnostic method that consumes them.
+
 A discipline for hard bugs. Skip phases only when explicitly justified.
 
 ## Redact first

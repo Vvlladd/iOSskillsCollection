@@ -147,6 +147,62 @@ Run `./install.sh --dry-run` first if you want to see exactly what lands where.
 
 ---
 
+## Don't install all of it
+
+Everything recommended in this README adds up to about **29 skills**, and they
+overlap. Agents pick a skill by matching its `description`, so redundancy is not
+free — it makes selection worse, not better.
+
+The collisions, if you install indiscriminately:
+
+| Cluster | Competing | Who wins |
+|---|---|---|
+| **SwiftUI** | 6 | Pick **one** primary — see below |
+| **Simulator / debug** | 3 | Keep two, drop `ios-debugger-agent` |
+| **Concurrency** | 2 | AvdLee's, every time |
+| **Testing** | 2 | Keep both — they do different jobs |
+
+**SwiftUI — pick one primary, not three.**
+[AvdLee's `swiftui-expert-skill`](https://github.com/AvdLee/SwiftUI-Agent-Skill)
+names state management, composition, performance, `ForEach` identity *and* Liquid
+Glass in its own description, so it directly subsumes `swiftui-liquid-glass`,
+`swiftui-performance-audit`, and `swiftui-view-refactor` here. Either take his one
+broad skill **or** these three narrow ones. Running both means four skills bidding
+on every SwiftUI prompt.
+
+Apple's `swiftui-whats-new-27` is the exception — it's version-specific fact, not
+advice, so it composes with either choice.
+
+**Concurrency:** AvdLee's `swift-concurrency` (16 reference files) over this repo's
+`swift-concurrency-expert` (one page). Keep the small one only if you specifically
+want the Swift 6.2 Approachable Concurrency framing.
+
+**Testing:** keep both. [`swift-tdd`](skills/swift-tdd) is the red→green workflow;
+Apple's `test-modernizer` is XCTest→Swift Testing migration. Different jobs.
+
+**Debug:** keep [`swift-diagnosing-bugs`](skills/swift-diagnosing-bugs) (the method)
+and Apple's `device-interaction` (the mechanics). Drop `ios-debugger-agent` — it
+overlaps Apple's, and Apple's is first-party.
+
+### A stack that doesn't fight itself
+
+```bash
+./install.sh --add avdlee-swiftui --add avdlee-swift-concurrency
+```
+
+```bash
+xcrun mcpbridge run-agent skills export --output-dir ~/.claude/skills
+```
+
+Then from this repo take the skills nothing else covers: `swift-tdd`,
+`swift-diagnosing-bugs`, `xcode-merge-conflicts`, `swift-pre-commit`,
+`swift-domain-modeling`, `swift-code-review`, `apple-docs-research`,
+`apple-foundation-models`, `instruments-profile-session`, `app-store-changelog`,
+`gh-issue-fix-flow`.
+
+That lands around **20 skills with no two bidding for the same prompt**, which
+beats 29 that do.
+
 ## Apple's own skills (don't install them from here)
 
 Xcode 27 ships seven agent skills, and one command exports them from **your**
@@ -167,6 +223,18 @@ license, with no grant permitting redistribution — which is why the mirrors of
 them on GitHub carry no license at all. Everyone with Xcode already has them one
 command away, they change with every Xcode build, and a vendored copy silently
 misrepresents which build it came from.
+
+**Should their content be merged into the skills here? No.** Apple's
+`swiftui-specialist` opens by stating "This guidance was written and published by
+Apple" — copying its prose means stripping a declared authorship claim. Its
+`soft-deprecated-apis.md` is stamped *"Generated from: iOS 27.0"* and is
+regenerated per SDK, so a copy here would be silently wrong the day iOS 28 ships.
+
+What *is* fair game: facts aren't copyrightable. "Prefer `@Observable` over
+`ObservableObject`" is a fact about the API — state it in your own words and cite
+Apple. And compose rather than duplicate: several skills here now hand off to
+Apple's explicitly when it's installed, which beats a copy because it can't
+go stale.
 
 They overlap this collection in places — Apple's `swiftui-specialist` against the
 SwiftUI skills here, `test-modernizer` against [`swift-tdd`](skills/swift-tdd),

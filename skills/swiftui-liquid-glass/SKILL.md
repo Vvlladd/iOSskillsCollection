@@ -7,6 +7,11 @@ description: Implement, review, or improve SwiftUI features using the iOS 26+ Li
 
 _Attribution: derived from [@Dimillian](https://github.com/Dimillian)'s `Dimillian/Skills` (MIT, published 2025-12-30). Locally modified._
 
+> **Defer to Apple where Apple is authoritative.** If `swiftui-whats-new-27` is
+> installed (`xcrun mcpbridge run-agent skills export`), treat it as the source of
+> truth for which Liquid Glass APIs exist in the current SDK and which are
+> soft-deprecated. This skill covers how to *apply* them well.
+
 ## Overview
 Use this skill to build or review SwiftUI features that fully align with the iOS 26+ Liquid Glass API. Prioritize native APIs (`glassEffect`, `GlassEffectContainer`, glass button styles) and Apple design guidance. Keep usage consistent, interactive where needed, and performance aware.
 

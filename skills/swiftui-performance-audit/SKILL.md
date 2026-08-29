@@ -7,6 +7,11 @@ description: Audit and improve SwiftUI runtime performance from code review and 
 
 _Attribution: derived from [@Dimillian](https://github.com/Dimillian)'s `Dimillian/Skills` (MIT, published 2025-12-30). Locally modified._
 
+> **Defer to Apple where Apple is authoritative.** If Apple's `swiftui-specialist`
+> is installed, its `references/foreach.md` and `references/dataflow.md` are the
+> reference on identity and observation-granularity traps. This skill covers the
+> audit workflow and escalation to Instruments.
+
 ## Overview
 
 Audit SwiftUI view performance end-to-end, from instrumentation and baselining to root-cause analysis and concrete remediation steps.
