@@ -9,7 +9,6 @@ pointing at the best iOS skills the community has already built.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-000)](https://code.claude.com/docs/en/skills)
-[![skills.sh](https://skills.sh/b/Vvlladd/iOSskillsCollection)](https://skills.sh/Vvlladd/iOSskillsCollection)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-ready-D97757)](#claude-code)
 [![Codex](https://img.shields.io/badge/Codex-ready-10A37F)](#codex)
 [![Cursor](https://img.shields.io/badge/Cursor-ready-000)](#cursor)
@@ -69,8 +68,9 @@ Plus the [`ios-swift-engineer`](agents/ios-swift-engineer.md) subagent for Claud
 npx skills add https://github.com/Vvlladd/iOSskillsCollection
 ```
 
-Copies editable skill files into your project — hack on them freely. Add
-`--skill <name>` for just one:
+Installs into `.agents/skills/` — the universal location read by Codex, Cursor,
+Gemini CLI, Copilot, Warp and a dozen others — and symlinks `.claude/skills/` for
+Claude Code. Files are yours to edit. Add `--skill <name>` for just one:
 
 ```bash
 npx skills add https://github.com/Vvlladd/iOSskillsCollection --skill apple-foundation-models
