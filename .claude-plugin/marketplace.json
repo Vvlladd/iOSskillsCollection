@@ -7,12 +7,12 @@
     "url": "https://github.com/Vvlladd"
   },
   "metadata": {
-    "description": "A lean, curated collection of iOS and Swift Agent Skills: nine original skills for Apple Foundation Models, Instruments profiling, Liquid Glass, SwiftUI performance, and App Store release flow - plus a vetted registry of the best skills from across the community."
+    "description": "A lean, curated collection of iOS and Swift Agent Skills: ten skills for Apple Foundation Models, Instruments profiling, Liquid Glass, SwiftUI performance, Swift TDD, and App Store release flow - plus a vetted registry of the best skills from across the community."
   },
   "plugins": [
     {
       "name": "ios-skills-collection",
-      "description": "Nine original iOS/Swift Agent Skills covering Apple Foundation Models, Instruments profiling sessions, SwiftUI Liquid Glass, SwiftUI performance audits, view refactoring, Swift 6.2 concurrency, simulator debugging, App Store changelogs, and GitHub issue fix flow. Includes the ios-swift-engineer subagent.",
+      "description": "Ten iOS/Swift Agent Skills covering Apple Foundation Models, Instruments profiling sessions, SwiftUI Liquid Glass, SwiftUI performance audits, view refactoring, Swift 6.2 concurrency, Swift TDD, simulator debugging, App Store changelogs, and GitHub issue fix flow. Includes the ios-swift-engineer subagent.",
       "repository": "https://github.com/Vvlladd/iOSskillsCollection",
       "version": "1.0.0",
       "author": {

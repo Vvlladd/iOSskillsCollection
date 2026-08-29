@@ -4,7 +4,7 @@
 
 **A lean, curated collection of iOS & Swift Agent Skills.**
 
-Nine original skills you can install in one command — plus a vetted registry
+Ten skills you can install in one command — plus a vetted registry
 pointing at the best iOS skills the community has already built.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -24,8 +24,10 @@ or a mega-dump of 200+ vendored copies that go stale the day they're committed.
 
 This one is deliberately different:
 
-- **Bundled = original only.** The nine skills in `skills/` are written here. Nothing
-  is a re-upload of somebody else's work.
+- **Bundled = written or genuinely adapted here.** Nine of the ten skills in
+  `skills/` are original. The tenth, `swift-tdd`, is an acknowledged MIT
+  derivative rewritten for Swift Testing — see its [NOTICE](skills/swift-tdd/NOTICE.md).
+  Nothing here is a straight re-upload of somebody else's work.
 - **Everything else is linked, not vendored.** The [registry](registry/skills.json)
   indexes 21 external sources. `--add` clones from the *author's* repo at install
   time, so you always get their current version and they keep the credit.
@@ -43,6 +45,7 @@ This one is deliberately different:
 | [`swiftui-performance-audit`](skills/swiftui-performance-audit) | Diagnose janky scrolling, excessive view updates, and layout thrash from code review, escalating to Instruments when review isn't enough. |
 | [`swiftui-view-refactor`](skills/swiftui-view-refactor) | Consistent view ordering, dependency injection, and correct `@Observable` usage. Includes MV pattern reference. |
 | [`swift-concurrency-expert`](skills/swift-concurrency-expert) | Swift 6.2 Approachable Concurrency: smallest-safe-fix triage for isolation and `Sendable` errors. |
+| [`swift-tdd`](skills/swift-tdd) | Red→green loop for Swift: seams worth testing, why `@testable import` is a smell, Swift Testing idioms, and protocol/closure/`URLProtocol` test doubles. *Adapted from [mattpocock/skills](https://github.com/mattpocock/skills), MIT.* |
 | [`ios-debugger-agent`](skills/ios-debugger-agent) | Drive a booted simulator via XcodeBuildMCP — build, launch, tap through the UI, capture logs, diagnose runtime behavior. |
 | [`app-store-changelog`](skills/app-store-changelog) | Turn git history since the last tag into user-facing App Store "What's New" copy. |
 | [`gh-issue-fix-flow`](skills/gh-issue-fix-flow) | Issue number → `gh` intake → fix → build/test → closing commit → push. |
@@ -176,7 +179,7 @@ but check before redistributing. `--list` shows the full set with these flags in
 ## Repo layout
 
 ```
-skills/                  9 original skills (Agent Skills open format)
+skills/                  10 skills (Agent Skills open format)
 agents/                  ios-swift-engineer subagent
 registry/skills.json     curated index of external sources
 install.sh               installer for Claude Code / Codex / Cursor / OpenCode
@@ -207,11 +210,11 @@ npx skills add https://github.com/mattpocock/skills --skill diagnosing-bugs --sk
 Also clean: `implement`, `improve-codebase-architecture`, `resolving-merge-conflicts`,
 `teach`, `grilling`, `wizard`, `wait-what`.
 
-**Adapt before trusting** — `tdd` is the notable one. Its `SKILL.md` is
-language-neutral and its argument (integration-style tests over mock-heavy ones)
-translates directly to Swift, but `tests.md` and `mocking.md` teach through
-`jest.mock` and `expect().toBe()`. Swap those for `@Test` / `#expect` or your agent
-learns the wrong idiom. Same caveat, more mildly, for `codebase-design` and `prototype`.
+**Already adapted** — his `tdd` was the strongest candidate and it ships here as
+[`swift-tdd`](skills/swift-tdd): same seam/anti-pattern/loop framing, with the
+`jest.mock` and `expect().toBe()` material replaced by Swift Testing and Swift's
+protocol-based doubles. Don't install his `tdd` on top of it. `codebase-design`
+and `prototype` carry the same mild caveat and are not adapted here.
 
 **Expect a prerequisite** — `code-review`, `triage`, `to-spec`, `to-tickets`,
 `wayfinder`, and `ask-matt` read `docs/agents/issue-tracker.md`, which only exists

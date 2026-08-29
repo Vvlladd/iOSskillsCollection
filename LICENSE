@@ -27,4 +27,11 @@ registry, and the installer.
 
 Skills reached through `registry/skills.json` are NOT covered: they are fetched
 at install time from their authors' repositories and remain under those
-authors' own licenses. No third-party skill content is redistributed here.
+authors' own licenses.
+
+THIRD-PARTY DERIVATIVE WORK
+
+`skills/swift-tdd/` is a derivative of the `tdd` skill from
+https://github.com/mattpocock/skills, MIT (c) 2026 Matt Pocock, used and
+modified under those terms. The upstream copyright and permission notice are
+reproduced in `skills/swift-tdd/NOTICE.md` as that license requires.
