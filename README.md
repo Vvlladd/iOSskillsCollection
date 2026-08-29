@@ -281,6 +281,50 @@ This is the whole reason the registry links instead of vendors: run that command
 again in six months and you get Antoine's six-months-newer skill, not a copy of
 today's frozen in your repo.
 
+### Worth knowing by name
+
+The registry lists whole repos; these are the individual skills that cover ground
+nothing bundled here does.
+
+**[Thomas Ricouard](https://github.com/Dimillian/Skills)** — beyond the six skills
+adopted above, his repo has the multi-agent patterns:
+
+| Skill | Why |
+|---|---|
+| `bug-hunt-swarm` | Parallel read-only agents racing at one root cause — a different shape from [`swift-diagnosing-bugs`](skills/swift-diagnosing-bugs)'s single tight loop, and better when you don't yet know where to look |
+| `review-swarm` | Parallel review of a diff, where [`swift-code-review`](skills/swift-code-review) runs two focused axes |
+| `orchestrate-batch-refactor` | Large refactors fanned out across agents |
+| `swiftui-ui-patterns` | Example-driven component building; the one SwiftUI skill of his not adopted here |
+| `macos-spm-app-packaging` | Ship a macOS app from SwiftPM with no `.xcodeproj` at all |
+| `project-skill-audit` | Reads your past sessions and recommends which skills you actually need |
+
+```bash
+./install.sh --add dimillian-skills
+```
+
+> **This replaces six skills, by design.** His repo uses the same directory names
+> as the six adopted above, so `--add dimillian-skills` overwrites them with his
+> current versions. That is the better outcome — he maintains them and the copies
+> here have drifted — but it is a wholesale replacement, so local edits and the
+> `NOTICE.md` files go with it. Install his *instead of*, not alongside.
+
+**[Peter Steinberger](https://github.com/steipete/agent-scripts)** — the deepest
+macOS and release-engineering coverage anywhere, and almost no overlap with this
+collection:
+
+| Skill | Why |
+|---|---|
+| `hopper-debugger` | Disassembly of macOS/iOS binaries, ObjC/Swift symbols, dyld. Nothing else here goes near this |
+| `release-mac-app` | Sparkle, notarization, GitHub Release, Homebrew — the whole Mac shipping chain |
+| `xcode-sync` | Signed archives and Xcode version management across a fleet of Macs |
+| `native-app-performance` | `xctrace` hotspots, complementary to [`instruments-profile-session`](skills/instruments-profile-session) |
+| `github-deep-review` | Triage of stale-or-real issues, reads the code before judging |
+| `modern-swift` + `swift6-migration-compact` | In [`agent-rules`](https://github.com/steipete/agent-rules) — Cursor `.mdc` format, usable as plain agent context anywhere |
+
+```bash
+./install.sh --add steipete-agent-scripts --add steipete-agent-rules
+```
+
 A sample of what's indexed:
 
 | Source | Author | License | Covers |
