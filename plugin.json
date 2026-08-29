@@ -1,7 +1,7 @@
 {
   "name": "ios-skills-collection",
   "version": "1.0.0",
-  "description": "Ten iOS/Swift Agent Skills covering Apple Foundation Models, Instruments profiling sessions, SwiftUI Liquid Glass, SwiftUI performance audits, view refactoring, Swift 6.2 concurrency, Swift TDD, simulator debugging, App Store changelogs, and GitHub issue fix flow. Includes the ios-swift-engineer subagent.",
+  "description": "Sixteen iOS/Swift Agent Skills: Apple Foundation Models, Instruments profiling, SwiftUI Liquid Glass and performance, view refactoring, Swift 6.2 concurrency, Swift TDD, bug diagnosis, code review, domain modeling, Xcode merge conflicts, pre-commit hooks, Apple docs research, simulator debugging, App Store changelogs, and GitHub issue fix flow. Includes the ios-swift-engineer subagent.",
   "author": {
     "name": "Vlad Toma",
     "url": "https://github.com/Vvlladd"

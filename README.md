@@ -4,7 +4,7 @@
 
 **A lean, curated collection of iOS & Swift Agent Skills.**
 
-Ten skills you can install in one command — plus a vetted registry
+Sixteen skills you can install in one command — plus a vetted registry
 pointing at the best iOS skills the community has already built.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -24,10 +24,10 @@ or a mega-dump of 200+ vendored copies that go stale the day they're committed.
 
 This one is deliberately different:
 
-- **Bundled = written or genuinely adapted here.** Nine of the ten skills in
-  `skills/` are original. The tenth, `swift-tdd`, is an acknowledged MIT
-  derivative rewritten for Swift Testing — see its [NOTICE](skills/swift-tdd/NOTICE.md).
-  Nothing here is a straight re-upload of somebody else's work.
+- **Bundled = written or genuinely adapted here.** Nine skills are original.
+  Seven are acknowledged MIT derivatives of [`mattpocock/skills`](https://github.com/mattpocock/skills),
+  rewritten for Swift and Xcode rather than copied — each ships a `NOTICE.md`
+  stating what was kept and what is new. Nothing here is a straight re-upload.
 - **Everything else is linked, not vendored.** The [registry](registry/skills.json)
   indexes 21 external sources. `--add` clones from the *author's* repo at install
   time, so you always get their current version and they keep the credit.
@@ -37,6 +37,8 @@ This one is deliberately different:
 
 ## The skills
 
+### Original
+
 | Skill | What it does |
 |---|---|
 | [`apple-foundation-models`](skills/apple-foundation-models) | On-device AI with Apple's Foundation Models: `SystemLanguageModel`, guided generation, tool calling, safety, localization. **10 reference docs, ~130 KB.** |
@@ -45,10 +47,24 @@ This one is deliberately different:
 | [`swiftui-performance-audit`](skills/swiftui-performance-audit) | Diagnose janky scrolling, excessive view updates, and layout thrash from code review, escalating to Instruments when review isn't enough. |
 | [`swiftui-view-refactor`](skills/swiftui-view-refactor) | Consistent view ordering, dependency injection, and correct `@Observable` usage. Includes MV pattern reference. |
 | [`swift-concurrency-expert`](skills/swift-concurrency-expert) | Swift 6.2 Approachable Concurrency: smallest-safe-fix triage for isolation and `Sendable` errors. |
-| [`swift-tdd`](skills/swift-tdd) | Red→green loop for Swift: seams worth testing, why `@testable import` is a smell, Swift Testing idioms, and protocol/closure/`URLProtocol` test doubles. *Adapted from [mattpocock/skills](https://github.com/mattpocock/skills), MIT.* |
 | [`ios-debugger-agent`](skills/ios-debugger-agent) | Drive a booted simulator via XcodeBuildMCP — build, launch, tap through the UI, capture logs, diagnose runtime behavior. |
 | [`app-store-changelog`](skills/app-store-changelog) | Turn git history since the last tag into user-facing App Store "What's New" copy. |
 | [`gh-issue-fix-flow`](skills/gh-issue-fix-flow) | Issue number → `gh` intake → fix → build/test → closing commit → push. |
+
+### Adapted from `mattpocock/skills` (MIT)
+
+Seven skills rewritten for Swift and Xcode. His framing, our idioms — each carries
+a `NOTICE.md` recording exactly what was kept and what is new.
+
+| Skill | What changed for iOS |
+|---|---|
+| [`swift-tdd`](skills/swift-tdd) | Swift Testing idioms, a table of Swift's real seams, why `@testable import` is the reach-inside anti-pattern with a one-word opt-in, and test doubles via protocols/closures/`URLProtocol` — Swift has no runtime mocking, so the `jest.mock` material was replaced outright. |
+| [`swift-diagnosing-bugs`](skills/swift-diagnosing-bugs) | Ten iOS ways to build a feedback loop (XCTest, previews, `simctl`, LLDB breakpoint actions, `os_log`, Instruments, sanitizers, `git bisect run`), Apple determinism traps, and a crash-log termination-reason table. |
+| [`swift-code-review`](skills/swift-code-review) | A Swift review baseline — retain cycles, main-thread violations, unsafe concurrency escapes, SwiftUI property-wrapper and `ForEach` identity criteria — on top of his two-axis structure. No dependency on his setup skill. |
+| [`swift-domain-modeling`](skills/swift-domain-modeling) | Making illegal states unrepresentable with enums, domain types over primitive obsession, and the Apple decisions that actually earn an ADR (SwiftData vs Core Data, migration strategy, deployment target). |
+| [`xcode-merge-conflicts`](skills/xcode-merge-conflicts) | `project.pbxproj` conflicts done right — multi-section membership, `plutil -lint` verification, the Tuist/XcodeGen regeneration rule — plus `Package.resolved`, `.xcstrings`, schemes, asset catalogs, and `.xcdatamodeld`. |
+| [`swift-pre-commit`](skills/swift-pre-commit) | Full reimplementation: a plain git hook driving SwiftFormat and SwiftLint on staged files, with `core.hooksPath` so the team actually gets the hooks. No Node toolchain in an Xcode repo. |
+| [`apple-docs-research`](skills/apple-docs-research) | An eight-tier Apple source hierarchy (headers → docs → Swift Evolution → WWDC), availability matrices, deprecation states, and version-stamping every finding so notes don't rot. |
 
 Plus the [`ios-swift-engineer`](agents/ios-swift-engineer.md) subagent for Claude Code.
 
@@ -179,7 +195,7 @@ but check before redistributing. `--list` shows the full set with these flags in
 ## Repo layout
 
 ```
-skills/                  10 skills (Agent Skills open format)
+skills/                  16 skills (9 original, 7 adapted)
 agents/                  ios-swift-engineer subagent
 registry/skills.json     curated index of external sources
 install.sh               installer for Claude Code / Codex / Cursor / OpenCode
@@ -195,35 +211,34 @@ also work in Gemini CLI, pi, Autohand, and anything else that reads it.
 
 ## Pairing with engineering-process skills
 
-These skills cover *how iOS works*. They pair well with skills covering *how to
-work* — [`mattpocock/skills`](https://github.com/mattpocock/skills) (MIT) being the
-best of those. Install it selectively, not wholesale: of its 37 skills, roughly 15
-are true drop-ins on a Swift repo.
+These skills cover *how iOS works*. They pair with skills covering *how to work* —
+[`mattpocock/skills`](https://github.com/mattpocock/skills) (MIT) being the best of
+those. **The seven worth adapting are already adapted above**; don't install his
+versions on top of them. For the rest, install selectively.
 
-**Drop in unchanged** — these reason about git diffs, architecture, and discipline,
+**Drop in unchanged** — these reason about git diffs, architecture and discipline,
 with nothing language-specific in them:
 
 ```bash
-npx skills add https://github.com/mattpocock/skills --skill diagnosing-bugs --skill handoff --skill domain-modeling --skill research
+npx skills add https://github.com/mattpocock/skills --skill handoff --skill implement --skill improve-codebase-architecture --skill resolving-merge-conflicts
 ```
 
-Also clean: `implement`, `improve-codebase-architecture`, `resolving-merge-conflicts`,
-`teach`, `grilling`, `wizard`, `wait-what`.
+Also clean: `teach`, `grilling`, `grill-with-docs`, `wizard`, `wait-what`,
+`to-questionnaire`, `git-guardrails-claude-code`.
 
-**Already adapted** — his `tdd` was the strongest candidate and it ships here as
-[`swift-tdd`](skills/swift-tdd): same seam/anti-pattern/loop framing, with the
-`jest.mock` and `expect().toBe()` material replaced by Swift Testing and Swift's
-protocol-based doubles. Don't install his `tdd` on top of it. `codebase-design`
-and `prototype` carry the same mild caveat and are not adapted here.
+**Deliberately not adapted** — `grilling`, `teach`, `wait-what`, `wizard`,
+`writing-for-agents` and friends are pure process. An "iOS version" of them would
+be his text with a different name on it, which is exactly the laundering this repo
+exists to avoid. Install his originals; he wrote them, he maintains them.
 
-**Expect a prerequisite** — `code-review`, `triage`, `to-spec`, `to-tickets`,
-`wayfinder`, and `ask-matt` read `docs/agents/issue-tracker.md`, which only exists
-after running his `setup-matt-pocock-skills`. They aren't broken without it, they
-just stop and ask. Note that setup writes *his* conventions into your repo.
+**Expect a prerequisite** — `triage`, `to-spec`, `to-tickets`, `wayfinder` and
+`ask-matt` read `docs/agents/issue-tracker.md`, which only exists after running his
+`setup-matt-pocock-skills`. They aren't broken without it, they just stop and ask.
+Note that setup writes *his* conventions into your repo.
 
-**Skip on iOS** — `setup-pre-commit` (Husky, lint-staged, Prettier — you want
-SwiftLint/SwiftFormat) and `migrate-to-shoehorn` (a TypeScript-only library). His
-`in-progress/` directory is flagged unstable by him; treat it that way.
+**Skip on iOS** — `migrate-to-shoehorn` is a TypeScript-only library. His
+`setup-pre-commit` is superseded by [`swift-pre-commit`](skills/swift-pre-commit)
+here. His `in-progress/` directory is flagged unstable by him; treat it that way.
 
 ---
 

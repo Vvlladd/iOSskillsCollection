@@ -31,7 +31,21 @@ authors' own licenses.
 
 THIRD-PARTY DERIVATIVE WORK
 
-`skills/swift-tdd/` is a derivative of the `tdd` skill from
+The following skills are derivatives of skills from
 https://github.com/mattpocock/skills, MIT (c) 2026 Matt Pocock, used and
-modified under those terms. The upstream copyright and permission notice are
-reproduced in `skills/swift-tdd/NOTICE.md` as that license requires.
+modified under those terms:
+
+    skills/swift-tdd/               <- engineering/tdd
+    skills/swift-diagnosing-bugs/   <- engineering/diagnosing-bugs
+    skills/swift-code-review/       <- engineering/code-review
+    skills/swift-domain-modeling/   <- engineering/domain-modeling
+    skills/xcode-merge-conflicts/   <- engineering/resolving-merge-conflicts
+    skills/apple-docs-research/     <- engineering/research
+    skills/swift-pre-commit/        <- misc/setup-pre-commit
+
+Each contains a NOTICE.md reproducing the upstream copyright and permission
+notice as that license requires, and stating what was kept versus added. The
+NOTICE ships inside each skill directory so it travels with any copy the
+installer makes.
+
+The remaining nine skills in skills/ are original work.
