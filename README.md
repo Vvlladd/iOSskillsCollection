@@ -53,7 +53,11 @@ Plus the [`ios-swift-engineer`](agents/ios-swift-engineer.md) subagent for Claud
 > **On Swift Concurrency and SwiftUI:** this repo deliberately ships neither.
 > [Antoine van der Lee](https://github.com/AvdLee) already maintains the definitive
 > skills for both, and they're better than anything worth duplicating here.
-> Get them with `./install.sh --add avdlee-swift-concurrency avdlee-swiftui`.
+> Pull them straight from him:
+>
+> ```bash
+> ./install.sh --add avdlee-swift-concurrency --add avdlee-swiftui
+> ```
 
 ---
 
@@ -125,11 +129,32 @@ Run `./install.sh --dry-run` first if you want to see exactly what lands where.
 ./install.sh --add avdlee-swiftui
 ```
 
-`--add` also takes any GitHub repo directly:
+`--add` is repeatable, and also takes any GitHub repo directly:
 
 ```bash
-./install.sh --add AvdLee/Core-Data-Agent-Skill
+./install.sh --add avdlee-swift-concurrency --add avdlee-swiftui --add AvdLee/Core-Data-Agent-Skill
 ```
+
+### Refreshing an app that already vendored skills
+
+If a project has skills copied into its `.claude/skills/` (or `.agents/skills/`),
+those copies are frozen at whatever the author had shipped that day. Point the
+installer at the project with `--project` to replace them with current upstream:
+
+```bash
+cd ~/path/to/YourApp
+```
+
+```bash
+~/path/to/iOSskillsCollection/install.sh --add avdlee-swift-concurrency --add avdlee-swiftui --project
+```
+
+`--add` overwrites a skill directory of the same name, so re-running it *is* the
+update mechanism. Add `--dry-run` first to see exactly what gets replaced.
+
+This is the whole reason the registry links instead of vendors: run that command
+again in six months and you get Antoine's six-months-newer skill, not a copy of
+today's frozen in your repo.
 
 A sample of what's indexed:
 
