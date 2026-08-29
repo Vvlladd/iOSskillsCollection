@@ -12,7 +12,7 @@ jobs:
     name: Skills, registry & manifests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Validate
         run: ./scripts/validate.sh
       - name: Shellcheck the installer
@@ -30,7 +30,7 @@ jobs:
     name: Registry repos still reachable
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Check every registry repo resolves
         run: |
           fail=0
